@@ -14,6 +14,7 @@ TBD - copy from ITU
     - [ ] Data sources (media sites, countries)
     - [ ] How does our data collection process look like
   - [ ] Try to get previous reports
+  - [ ] How to store data --> csv
   - [ ] Define tasks and assign them 
 - Week 2 (31/10-07/11)
   - [ ] Data collection
