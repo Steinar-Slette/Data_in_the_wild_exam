@@ -10,15 +10,14 @@ TBD - copy from ITU
 ---
 ## Timeline
 - Week 1 (24/10-31/10)
-  - [ ] Define scope
-    - [ ] Data sources (media sites, countries)
-    - [ ] How does our data collection process look like
+  - [x] Define scope
+    - [x] Data sources (media sites, countries)
+    - [x] How does our data collection process look like
   - [ ] Try to get previous reports
-  - [ ] How to store data --> csv
-  - [ ] Define tasks and assign them 
+  - [x] How to store data --> csv
+  - [x] Define tasks and assign them 
 - Week 2 (31/10-07/11)
-  - [ ] Data collection
-    - [ ] Get emission data from existing data set
+  - [ ] See Notion
 - Week 3 (07/11-14/11)
   - [ ] Data collection
 - Week 4 (14/11-21/11)
