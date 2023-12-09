@@ -1,7 +1,0 @@
-;Url;Error
-0;https://blog.archive.org/2023/03/25/the-fight-continues/;list index out of range
-1;https://archive.org/details/radio;list index out of range
-2;https://blog.archive.org/2016/10/23/defining-web-pages-web-sites-and-web-captures/;list index out of range
-3;https://web.archive.org/web/20220101000057/https://www.bbc.co.uk/news;list index out of range
-4;https://web.archive.org/web/20220101000057/https://www.bbc.co.uk/news/localnews;list index out of range
-5;https://web.archive.org/web/20220101000057/https://www.bbc.com/news/world-us-canada-59843627;'NoneType' object has no attribute 'lower'
