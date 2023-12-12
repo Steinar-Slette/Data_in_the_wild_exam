@@ -21,8 +21,32 @@ This README.md documents describes which files are responsible for what parts, a
 
 ---
 
+# First steps
+
+## API keys
+
+For the data collection from 'The Guardian' and 'Pytrends' we make use of the provided APIs. Therefore you need your own API keys. The keys are stored in a .env file which can be created from the .env.sample file. The .env file should be placed in the root directory of the project.
+
+## Python environment
+
+We use a virtual environment to run our code. To create the environment run the following command in the root directory of the project:
+
+```
+python3 -m venv .venv
+source .venv/bin/activate
+
+# You can deactivate the environment with:
+source .venv/bin/deactivate
+```
+
+To install the required packages run:
+
+```
+pip install -r requirements.txt
+```
+
 # Data collection
 
-```bash
-tree
-```
+# Repository overview
+
+The following tree structure shows the files and folders, their purpose and their location within this repository. The main parts of the project are described in the [Get started](#get-started) section.
