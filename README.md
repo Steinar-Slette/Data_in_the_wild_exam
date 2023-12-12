@@ -70,7 +70,7 @@ We collect data from different news sources and apply different methods which ar
 
 The Guardian provides an API to access their articles. If you followed the [First steps](#first-steps) you should have your API key in the .env file. To collect the data from The Guardian run the sections of the [notebook](notebooks/1_data_collection/articles/guardian_api.ipynb) top to bottom.
 
-Keep following things in mind:
+Keep the following things in mind:
 
 - The API has a limit of 500 requests per day. Therefore you might need to run the notebook multiple times.
 - The date variables in the notebook are set to 2023-01-01 and 2023-01-31. You can change it to any date you want.
@@ -80,7 +80,7 @@ Keep following things in mind:
 
 Sky News does not provide an API or an archive. Therefore we use a web scraper for the Wayback Machine mainly based on the libraries Newspaper3k and Beautiful Soup. To collect the data from Sky News run the sections of the [notebook](notebooks/1_data_collection/articles/skynwes_scraper.ipynb) top to bottom.
 
-Keep following things in mind:
+Keep the following things in mind:
 
 - The date variables in the notebook can be changed to any date you want. The default values are set to 20230101 and 20230201.
 - Add the correct path to your the local cache for the scraped results as mentioned in the notebook.
@@ -98,11 +98,94 @@ To get the Google Trends data we use the 'interest_over_time' method of the pytr
 1. [Initialize pytrends](notebooks/1_data_collection/google_trends/initialize_google_trends_api.ipynb)
 2. [Collect Google Trends data](notebooks/1_data_collection/google_trends/get_google_trends_data.ipynb)
 
-## Keep following things in mind:
+## Keep the following things in mind:
 
 - To run this process we first need the data from the articles. Therefore you need to run the [Collection of articles](#collection-of-articles) first. You also need to change the path to the data in the notebook depending on the location you choose for the data of the articles.
 - The date variables in the notebook [Collect Google Trends data](notebooks/1_data_collection/google_trends/get_google_trends_data.ipynb) can be changed to any date you want. The default values are set to 2023-01-01 and 2023-01-31.
 - There might be some issues with the 429 error code. See the notebook [Initialize pytrends](notebooks/1_data_collection/google_trends/initialize_google_trends_api.ipynb) for more details.
+
+## Data processing
+
+After collecting the data we need to process it. The data processing can be split up into the following two parts:
+
+1. [Processing of articles](#processing-of-articles)
+2. [Processing of Google Trends](#processing-of-google-trends)
+
+### Processing of articles
+
+The processing of the articles can itself be split up into the following two parts which are not necessarily dependent on each other:
+
+1. [Annotation](#annotation)
+2. [Cleaning](#cleaning)
+
+#### Annotation
+
+As part of our analysis we want to classify the topic of the collected articles into the following categories by looking at their headlines and tags:
+
+- Politics
+- Business and Economy
+- Environment
+- Sports
+- Entertainment and Culture
+- Science and Technology
+- Health
+
+Before we can start with we have to clean and process the collected articles as described in the following steps.
+
+1. Run the [notebook](notebooks/2_data_processing/articles/cleaning/standardize_time_format.ipynb) to standardize the time format of the articles and filter out articles without or wrong dates.
+2. Run the [notebook](notebooks/2_data_processing/articles/cleaning/remove_articles_without_tags.ipynb) to remove articles without tags.
+3. TODO: run the merge notebook first
+4. Run the [notebook](notebooks/2_data_processing/articles/cleaning/format_text_column.ipynb) to format the text column of the articles.
+
+Keep the following things in mind:
+
+- For all the steps mentioned above you should change the path to the data in the notebook depending on the location you choose for the data of the articles.
+
+##### Manual annotation
+
+The manual annotation of the articles is done to get a better understanding of the data and estimate the accuracy of the automatic annotation. To draw a random sample of the articles for the manual annotation run the [notebook](notebooks/2_data_processing/articles/draw_sample.ipynb) top to bottom.
+
+Keep the following things in mind:
+
+- Change the path to the data in the notebook depending on the location you choose for the data of the articles.
+- The notebook saves the data in the same folder as the notebook. The data is saved in a csv file with the name you define as output path.
+
+##### Automatic annotation
+
+The automatic annotation of the articles is done with the help of the openAI API. At this pont you should have your API key in the .env file and followed the steps as mentioned under [Annotation].
+
+For the automatic annotation we tried two different approaches:
+
+1. Annotation of the articles in batches [notebook](notebooks/2_data_processing/articles/annotation/gpt_annotation_batch.ipynb)
+2. Annotation of the articles one by one [notebook](notebooks/2_data_processing/articles/annotation/gpt_annotation_single.ipynb)
+
+We started with the annotation of the articles in batches due to API limitations. However, we were not satisfying with the results. One reason for this is that for some batches not all articles were annotated. Furthermore, sometimes a different as the defined category was annotated. Therefore we switched to the annotation of the articles one by one.
+
+To run the automatic one by one annotation of the articles run the [notebook](notebooks/2_data_processing/articles/annotation/gpt_annotation_single.ipynb) top to bottom.
+
+Keep the following thing in mind:
+
+- Depending on your API limits you might need to run the notebook multiple times and decrease the number of requests.
+
+#### Cleaning
+
+After running the automatic annotation we need to clean Category column. To do that run the [notebook](notebooks/2_data_processing/articles/cleaning/standardize_gpt_annotated_category.ipynb) top to bottom.
+
+Keep the following thing in mind:
+
+- Change the path to the data in the notebook depending on the location you choose for the data of the articles.
+
+### Processing of Google Trends
+
+The processing of the Google Trends data can itself be split up into the following three parts:
+
+1. Run [notebook](notebooks/2_data_processing/google_trends/check_google_trends_results.ipynb.ipynb) see if data is missing.
+2. Run [notebook](notebooks/2_data_processing/google_trends/normalize_google_trends_results.ipynb) to normalize the data.
+3. Run [notebook](notebooks/2_data_processing/google_trends/transpose_normalized_google_trends_results.ipynb) to transpose the data.
+
+Keep the following thing in mind:
+
+- Change the path to the data in the notebook depending on the location you choose for the data of the google trends results.
 
 # Repository overview
 
