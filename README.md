@@ -1,55 +1,28 @@
-# Data in the wild exam
+# data-in-the-wild
 
-## Goal of the projects
-TBD - copy from ITU
+This repository contains the code for the project for the course Data in the Wild: Wrangling and Visualising Data (Autumn 2023 - KSDWWVD1KU).
 
-## Keep track of and document
-- Challenges we deal with
-- Document all the steps we do
+### Team Members:
 
----
-## Timeline
-- Week 1 (24/10-31/10)
-  - [x] Define scope
-    - [x] Data sources (media sites, countries)
-    - [x] How does our data collection process look like
-  - [ ] Try to get previous reports
-  - [x] How to store data --> csv
-  - [x] Define tasks and assign them 
-- Week 2 (31/10-07/11)
-  - [ ] See Notion
-- Week 3 (07/11-14/11)
-  - [ ] Data collection
-- Week 4 (14/11-21/11)
-  - [ ] Data processing
-    - [ ] cleaning
-    - [ ] annotation
-- Week 5 (21/11-28/11)
-  - [ ] Create data set
-  - [ ] Visualize results
-- Week 6 (28/11-05/12)
-  - [ ] Finish up the report (mostly riding stuff)
-  - [ ] At the end should be ready to submit
-- Week 7 (05/12-12/112)
-  - We don't want to use this week
-  - Presentation
+Niclas Claßen (niclc@itu.dk), Marek Gala (galg@itu.dk), Manuel Knepper (mkne@itu.dk) & Steiner Slette(stsl@itu.dk)
 
 ---
-## Focus areas of our project
-- Data collection process
-  - Scraping, API, Databases
-  - Annotation the data
- 
-## Project phases
-- Planing (**we are here**)
-- Data collection
-- Data processing
-- Data agregating and visualization
-- Data set creation
-- Write the report
 
-## Optional stuff we can do for fun
-- Create an API to access our dataset
+# Get started
 
+This project is split up into 4 main parts:
 
+1. [Data collection](#data-collection)
+2. [Data processing](#data-processing)
+3. [Data analysis](#data-analysis)
+4. [Data visualization](#data-visualization)
 
+This README.md documents describes which files are responsible for what parts, and how to replicate our results. For a full project overview, see [Repository overview](#repository-overview).
+
+---
+
+# Data collection
+
+```bash
+tree
+```
