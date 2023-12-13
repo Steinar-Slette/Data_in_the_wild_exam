@@ -360,6 +360,7 @@ The following tree structure shows the files and folders within this repository.
 │           visualizations.ipynb
 │
 └───report
+    ├───paper.pdf
     └───figures
             articles_by_category_combined.png
             business_economy_frequency_interest_combined.png
