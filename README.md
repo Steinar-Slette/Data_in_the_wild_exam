@@ -29,7 +29,9 @@ TODO:
 
 ## API keys
 
-For the data collection from 'The Guardian' and 'Pytrends' we make use of the provided APIs. Therefore you need your own API keys. The keys are stored in a .env file which can be created from the .env.sample file. The .env file should be placed in the root directory of the project. You can create the .env file with the following command:
+For the data collection from 'The Guardian' and 'Pytrends' we make use of the provided APIs. Therefore you need your own API keys. The API key for 'The Guardian' can be requested here (free developer version): https://bonobo.capi.gutools.co.uk/register/developer
+
+The keys are stored in a .env file which can be created from the .env.sample file. The .env file should be placed in the root directory of the project. You can create the .env file with the following command:
 
 ```
 cp .env.sample .env
