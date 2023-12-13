@@ -223,36 +223,23 @@ The following tree structure shows the files and folders within this repository.
 │
 ├───data
 │   ├───interim
-│   │   │   .DS_Store
-│   │   │
 │   │   ├───annotated_articles
-│   │   │   │   .DS_Store
-│   │   │   │
 │   │   │   ├───automated_combined
-│   │   │   │   │   .DS_Store
-│   │   │   │   │
 │   │   │   │   ├───by_source
-│   │   │   │   │   │   .DS_Store
-│   │   │   │   │   │
 │   │   │   │   │   ├───guardian
 │   │   │   │   │   │       2022_guardian_automated_annotated.csv
 │   │   │   │   │   │       2023_guardian_automated_annotated.csv
 │   │   │   │   │   │
 │   │   │   │   │   └───skynews
-│   │   │   │   │           .DS_Store
 │   │   │   │   │           2022_skynews_automated_annotated.csv
 │   │   │   │   │           2023_skynews_automated_annotated.csv
 │   │   │   │   │
 │   │   │   │   └───by_year
-│   │   │   │           .DS_Store
 │   │   │   │           2022_articles_automated_annotated.csv
 │   │   │   │           2023_articles_automated_annotated.csv
 │   │   │   │
 │   │   │   ├───automated_raw
-│   │   │   │   │   .DS_Store
-│   │   │   │   │
 │   │   │   │   ├───guardian
-│   │   │   │   │       .DS_Store
 │   │   │   │   │       2022_guardian_automated_annotated.csv
 │   │   │   │   │       2022_guardian_automated_annotated_no_tags.csv
 │   │   │   │   │       2023_guardian_automated_annotated.csv
@@ -265,8 +252,6 @@ The following tree structure shows the files and folders within this repository.
 │   │   │   │           2023_skynews_automated_annotated_no_tags.csv
 │   │   │   │
 │   │   │   └───manual
-│   │   │       │   .DS_Store
-│   │   │       │
 │   │   │       ├───2022
 │   │   │       │       2022_manual_annotation_1.csv
 │   │   │       │       2022_manual_annotation_2.csv
@@ -290,13 +275,10 @@ The following tree structure shows the files and folders within this repository.
 │   │   │           2023_missung_google_trends_tags.csv
 │   │   │
 │   │   └───unique_tags
-│   │           .DS_Store
 │   │           2022_unique_tags.csv
 │   │           2023_unique_tags.csv
 │   │
 │   ├───processed
-│   │   │   .DS_Store
-│   │   │
 │   │   ├───articles
 │   │   │       2022_articles_processed.csv
 │   │   │       2023_articles_processed.csv
@@ -308,7 +290,6 @@ The following tree structure shows the files and folders within this repository.
 │   └───raw
 │       ├───articles
 │       │   ├───bbc
-│       │   │   │   .DS_Store
 │       │   │   │   2022_articles_bbc_raw.csv
 │       │   │   │   2023_articles_bbc_raw.csv
 │       │   │   │
@@ -317,12 +298,10 @@ The following tree structure shows the files and folders within this repository.
 │       │   │           2023_cdx_urls_bbc_results.csv
 │       │   │
 │       │   ├───guardian
-│       │   │       .DS_Store
 │       │   │       2022_articles_guardian_raw.csv
 │       │   │       2023_articles_guardian_raw.csv
 │       │   │
 │       │   └───skynews
-│       │       │   .DS_Store
 │       │       │   2022_articles_skynews_raw.csv
 │       │       │   2023_articles_skynews_raw.csv
 │       │       │
@@ -331,8 +310,6 @@ The following tree structure shows the files and folders within this repository.
 │       │               2023_cdx_urls_skynews_results.csv
 │       │
 │       └───google_trends
-│           │   .DS_Store
-│           │
 │           ├───2022_google_trends_results
 │           │       *_keywords.csv
 │           │
