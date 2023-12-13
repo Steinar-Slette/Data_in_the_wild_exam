@@ -198,7 +198,7 @@ To get started with analysis execute these two steps: (step 1 is optional, step 
 
 Keep the following thing in mind:
 
-- Change the path to the data in the notebook depending on the location you choose for the data of the google trends results.
+- Change the path to the data in the notebooks depending on the location you choose for the data.
 
 ## Data visualization
 
