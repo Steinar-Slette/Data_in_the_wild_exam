@@ -23,7 +23,7 @@ This README.md documents describes which files are responsible for what parts, a
 
 # Results
 
-The final datasets [data_2022](data/processed/articles/2022_articles_processed.csv) and [data_2023](data/processed/articles/2023_articles_processed.csv) are located in the [folder](data/processed/articles/) and can be reproduced by following the notebooks 1_data_collection and 2_data_processing located in the [folder](notebooks). The subsequent analysis and reproduction of our results can then be recreated in the notebooks contained in 3_data_analysis and 4_data_visualization located in the [folder](notebooks). 
+The final datasets [data_2022](data/processed/articles/2022_articles_processed.csv) and [data_2023](data/processed/articles/2023_articles_processed.csv) are located in the [folder](data/processed/articles/) and can be reproduced by following the notebooks 1_data_collection and 2_data_processing located in the [folder](notebooks). The subsequent analysis and reproduction of our results can then be recreated in the notebooks contained in 3_data_analysis and 4_data_visualization located in the [folder](notebooks).
 
 # First steps
 
@@ -192,31 +192,26 @@ Keep the following thing in mind:
 ## Data analysis
 
 To get started with analysis execute these two steps: (step 1 is optional, step 2 is required)
+
 1. Run [notebook](notebooks/3_data_analysis/compare_annotation_accuracy.ipynb) get the accuracy of the manual and automatic annotations.
-2. Run [notebook](notebooks/3_data_analysis/get_google_trends_score.ipynb) calculate the score and average score of each article based on the google trends data. 
+2. Run [notebook](notebooks/3_data_analysis/get_google_trends_score.ipynb) calculate the score and average score of each article based on the google trends data.
 
 Keep the following thing in mind:
 
 - Change the path to the data in the notebook depending on the location you choose for the data of the google trends results.
 
-## Visualization
+## Data visualization
 
 To reconstruct our visualizations execute the following step:
-1. Run [notebook](notebooks/4_data_visualization/visualizations.ipynb) generate all visualizations contained in the report. 
+
+1. Run [notebook](notebooks/4_data_visualization/visualizations.ipynb) generate all visualizations contained in the report.
 
 Keep the following thing in mind:
 
-- The notebook only contains the visualization for one category in the " Visualize the relationship between frequency of articles and popularity" section, to visualize all graphs represented in the appendix of the report - change the "Category" variable to your desired category and run the cell again. 
+- The notebook only contains the visualization for one category in the " Visualize the relationship between frequency of articles and popularity" section, to visualize all graphs represented in the appendix of the report - change the "Category" variable to your desired category and run the cell again.
 
-## plots
-
-The images of the plots located in the (report/plots) folder are manually saved from the [notebook](notebooks/4_data_visualization/visualizations.ipynb), reproducing these .png files requires manually storing them in the desired folder from the notebook.
-
+The images of the figures located in the (report/figures) folder are manually saved from the [notebook](notebooks/4_data_visualization/visualizations.ipynb), reproducing these .png files requires manually storing them in the desired folder from the notebook.
 
 # Repository overview
 
 The following tree structure shows the files and folders, their purpose and their location within this repository. The main parts of the project are described in the [Get started](#get-started) section.
-
-```
-
-```
