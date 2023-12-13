@@ -23,7 +23,7 @@ This README.md documents describes which files are responsible for what parts, a
 
 # Results
 
-TODO:
+The final datasets [data_2022](data/processed/articles/2022_articles_processed.csv) and [data_2023](data/processed/articles/2023_articles_processed.csv) are located in the [folder](data/processed/articles/) and can be reproduced by following the notebooks 1_data_collection and 2_data_processing located in the [folder](notebooks). The subsequent analysis and reproduction of our results can then be recreated in the notebooks contained in 3_data_analysis and 4_data_visualization located in the [folder](notebooks). 
 
 # First steps
 
