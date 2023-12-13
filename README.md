@@ -215,3 +215,48 @@ The images of the figures located in the (report/figures) folder are manually sa
 # Repository overview
 
 The following tree structure shows the files and folders, their purpose and their location within this repository. The main parts of the project are described in the [Get started](#get-started) section.
+
+├───data
+│ ├───interim
+│ │ ├───annotated_articles
+│ │ │ ├───automated_combined
+│ │ │ │ ├───by_source
+│ │ │ │ │ ├───guardian
+│ │ │ │ │ └───skynews
+│ │ │ │ └───by_year
+│ │ │ ├───automated_raw
+│ │ │ │ ├───guardian
+│ │ │ │ └───skynews
+│ │ │ └───manual
+│ │ │ ├───2022
+│ │ │ └───2023
+│ │ ├───google_trends
+│ │ │ ├───extra_google_trends_tags
+│ │ │ └───missing_google_trends_tags
+│ │ └───unique_tags
+│ ├───processed
+│ │ ├───articles
+│ │ └───google_trends
+│ └───raw
+│ ├───articles
+│ │ ├───bbc
+│ │ │ └───cdx_results
+│ │ ├───guardian
+│ │ └───skynews
+│ │ └───cdx_results
+│ └───google_trends
+│ ├───2022_google_trends_results
+│ └───2023_google_trends_results
+├───notebooks
+│ ├───1_data_collection
+│ │ ├───articles
+│ │ └───google_trends
+│ ├───2_data_processing
+│ │ ├───articles
+│ │ │ ├───annotation
+│ │ │ └───cleaning
+│ │ └───google_trends
+│ ├───3_data_analysis
+│ └───4_data_visualization
+└───report
+└───plots
