@@ -216,47 +216,181 @@ The images of the figures located in the (report/figures) folder are manually sa
 
 The following tree structure shows the files and folders, their purpose and their location within this repository. The main parts of the project are described in the [Get started](#get-started) section.
 
+```
+│   .env.sample
+│   .gitignore
+│   README.md
+│
 ├───data
-│ ├───interim
-│ │ ├───annotated_articles
-│ │ │ ├───automated_combined
-│ │ │ │ ├───by_source
-│ │ │ │ │ ├───guardian
-│ │ │ │ │ └───skynews
-│ │ │ │ └───by_year
-│ │ │ ├───automated_raw
-│ │ │ │ ├───guardian
-│ │ │ │ └───skynews
-│ │ │ └───manual
-│ │ │ ├───2022
-│ │ │ └───2023
-│ │ ├───google_trends
-│ │ │ ├───extra_google_trends_tags
-│ │ │ └───missing_google_trends_tags
-│ │ └───unique_tags
-│ ├───processed
-│ │ ├───articles
-│ │ └───google_trends
-│ └───raw
-│ ├───articles
-│ │ ├───bbc
-│ │ │ └───cdx_results
-│ │ ├───guardian
-│ │ └───skynews
-│ │ └───cdx_results
-│ └───google_trends
-│ ├───2022_google_trends_results
-│ └───2023_google_trends_results
+│   ├───interim
+│   │   │   .DS_Store
+│   │   │
+│   │   ├───annotated_articles
+│   │   │   │   .DS_Store
+│   │   │   │
+│   │   │   ├───automated_combined
+│   │   │   │   │   .DS_Store
+│   │   │   │   │
+│   │   │   │   ├───by_source
+│   │   │   │   │   │   .DS_Store
+│   │   │   │   │   │
+│   │   │   │   │   ├───guardian
+│   │   │   │   │   │       2022_guardian_automated_annotated.csv
+│   │   │   │   │   │       2023_guardian_automated_annotated.csv
+│   │   │   │   │   │
+│   │   │   │   │   └───skynews
+│   │   │   │   │           .DS_Store
+│   │   │   │   │           2022_skynews_automated_annotated.csv
+│   │   │   │   │           2023_skynews_automated_annotated.csv
+│   │   │   │   │
+│   │   │   │   └───by_year
+│   │   │   │           .DS_Store
+│   │   │   │           2022_articles_automated_annotated.csv
+│   │   │   │           2023_articles_automated_annotated.csv
+│   │   │   │
+│   │   │   ├───automated_raw
+│   │   │   │   │   .DS_Store
+│   │   │   │   │
+│   │   │   │   ├───guardian
+│   │   │   │   │       .DS_Store
+│   │   │   │   │       2022_guardian_automated_annotated.csv
+│   │   │   │   │       2022_guardian_automated_annotated_no_tags.csv
+│   │   │   │   │       2023_guardian_automated_annotated.csv
+│   │   │   │   │       2023_guardian_automated_annotated_no_tags.csv
+│   │   │   │   │
+│   │   │   │   └───skynews
+│   │   │   │           2022_skynews_automated_annotated.csv
+│   │   │   │           2022_skynews_automated_annotated_no_tags.csv
+│   │   │   │           2023_skynews_automated_annotated.csv
+│   │   │   │           2023_skynews_automated_annotated_no_tags.csv
+│   │   │   │
+│   │   │   └───manual
+│   │   │       │   .DS_Store
+│   │   │       │
+│   │   │       ├───2022
+│   │   │       │       2022_manual_annotation_1.csv
+│   │   │       │       2022_manual_annotation_2.csv
+│   │   │       │       2022_manual_annotation_sample.csv
+│   │   │       │
+│   │   │       └───2023
+│   │   │               2023_manual_annotation_1.csv
+│   │   │               2023_manual_annotation_2.csv
+│   │   │               2023_manual_annotation_sample.csv
+│   │   │
+│   │   ├───google_trends
+│   │   │   │   2022_normalized_results.csv
+│   │   │   │   2023_normalized_results.csv
+│   │   │   │
+│   │   │   ├───extra_google_trends_tags
+│   │   │   │       2022_extra_google_trends_tags.csv
+│   │   │   │       2023_extra_google_trends_tags.csv
+│   │   │   │
+│   │   │   └───missing_google_trends_tags
+│   │   │           2022_missing_google_trends_tags.csv
+│   │   │           2023_missung_google_trends_tags.csv
+│   │   │
+│   │   └───unique_tags
+│   │           .DS_Store
+│   │           2022_unique_tags.csv
+│   │           2023_unique_tags.csv
+│   │
+│   ├───processed
+│   │   │   .DS_Store
+│   │   │
+│   │   ├───articles
+│   │   │       2022_articles_processed.csv
+│   │   │       2023_articles_processed.csv
+│   │   │
+│   │   └───google_trends
+│   │           2022_normalized_popularity.csv
+│   │           2023_normalized_popularity.csv
+│   │
+│   └───raw
+│       ├───articles
+│       │   ├───bbc
+│       │   │   │   .DS_Store
+│       │   │   │   2022_articles_bbc_raw.csv
+│       │   │   │   2023_articles_bbc_raw.csv
+│       │   │   │
+│       │   │   └───cdx_results
+│       │   │           2022_cdx_urls_bbc_results.csv
+│       │   │           2023_cdx_urls_bbc_results.csv
+│       │   │
+│       │   ├───guardian
+│       │   │       .DS_Store
+│       │   │       2022_articles_guardian_raw.csv
+│       │   │       2023_articles_guardian_raw.csv
+│       │   │
+│       │   └───skynews
+│       │       │   .DS_Store
+│       │       │   2022_articles_skynews_raw.csv
+│       │       │   2023_articles_skynews_raw.csv
+│       │       │
+│       │       └───cdx_results
+│       │               2022_cdx_urls_skynews_results.csv
+│       │               2023_cdx_urls_skynews_results.csv
+│       │
+│       └───google_trends
+│           │   .DS_Store
+│           │
+│           ├───2022_google_trends_results
+│           │       *_keywords.csv
+│           │
+│           └───2023_google_trends_results
+│                   *_keywords.csv
+│
 ├───notebooks
-│ ├───1_data_collection
-│ │ ├───articles
-│ │ └───google_trends
-│ ├───2_data_processing
-│ │ ├───articles
-│ │ │ ├───annotation
-│ │ │ └───cleaning
-│ │ └───google_trends
-│ ├───3_data_analysis
-│ └───4_data_visualization
+│   ├───1_data_collection
+│   │   ├───articles
+│   │   │       bbc_scraper.ipynb
+│   │   │       guardian_api.ipynb
+│   │   │       skynwes_scraper.ipynb
+│   │   │
+│   │   └───google_trends
+│   │           get_google_trends_data.ipynb
+│   │           initialize_google_trends_api.ipynb
+│   │
+│   ├───2_data_processing
+│   │   ├───articles
+│   │   │   │   draw_sample.ipynb
+│   │   │   │
+│   │   │   ├───annotation
+│   │   │   │       gpt_annotation_batch.ipynb
+│   │   │   │       gpt_annotation_single.ipynb
+│   │   │   │
+│   │   │   └───cleaning
+│   │   │           add_id.ipynb
+│   │   │           combine_data.ipynb
+│   │   │           format_text_column.ipynb
+│   │   │           remove_articles_without_tags.ipynb
+│   │   │           sort_articles_by_date.ipynb
+│   │   │           standardize_gpt_annotated_category.ipynb
+│   │   │           standardize_time_format.ipynb
+│   │   │
+│   │   └───google_trends
+│   │           check_google_trends_results.ipynb
+│   │           normalize_google_trends_results.ipynb
+│   │           transpose_normalized_google_trends_results.ipynb
+│   │
+│   ├───3_data_analysis
+│   │       compare_annotation_accuracy.ipynb
+│   │       get_google_trends_score.ipynb
+│   │
+│   └───4_data_visualization
+│           visualizations.ipynb
+│
 └───report
-└───plots
+    │   TODO.txt
+    │
+    └───plots
+            articles_by_category_combined.png
+            business_economy_frequency_interest_combined.png
+            entertainment_culture_frequency_interest_combined.png
+            environment_frequency_interest_combined.png
+            Frequency_of_top_ten.png
+            Guardian_skynews_count.png
+            health_frequency_interest_combined.png
+            politics_frequency_interest_combined.png
+            science_technology_frequency_interest_combined.png
+            sports_frequency_interest_combined.png
+```
