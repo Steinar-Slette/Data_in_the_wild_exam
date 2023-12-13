@@ -91,7 +91,7 @@ Keep the following things in mind:
 
 For BBC we tried a similar approach as for Sky News. However, we were not able to scrape the articles from BBC with a satisfactory result. The main problem was that the articles are loaded dynamically. As reference and for future work we added the [notebook](notebooks/1_data_collection/articles/bbc_scraper.ipynb) to the repository.
 
-## Google Trends
+## Collection of Google Trends
 
 To get the Google Trends data we use the 'interest_over_time' method of the pytrends library. To collect the data from Google Trends run the sections of the following two notebooks top to bottom:
 
@@ -134,7 +134,7 @@ Before we can start with we have to clean and process the collected articles as 
 
 1. Run the [notebook](notebooks/2_data_processing/articles/cleaning/standardize_time_format.ipynb) to standardize the time format of the articles and filter out articles without or wrong dates.
 2. Run the [notebook](notebooks/2_data_processing/articles/cleaning/remove_articles_without_tags.ipynb) to remove articles without tags.
-3. TODO: run the merge notebook first
+3. Run the [notebook](notebooks/2_data_processing/articles/cleaning/combine_data.ipynbipynb) to combine the data from the different sources. We used it to combine the data from The Guardian and Sky News for each year.
 4. Run the [notebook](notebooks/2_data_processing/articles/cleaning/format_text_column.ipynb) to format the text column of the articles.
 
 Keep the following things in mind:
@@ -186,6 +186,8 @@ The processing of the Google Trends data can itself be split up into the followi
 Keep the following thing in mind:
 
 - Change the path to the data in the notebook depending on the location you choose for the data of the google trends results.
+
+## Data analysis
 
 # Repository overview
 
