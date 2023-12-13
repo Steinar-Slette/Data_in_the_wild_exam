@@ -1,5 +1,0 @@
-pytrends
-pandas
-urllib3<2
-pandasql
-inflection
