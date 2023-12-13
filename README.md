@@ -214,7 +214,7 @@ The images of the figures located in the (report/figures) folder are manually sa
 
 # Repository overview
 
-The following tree structure shows the files and folders, their purpose and their location within this repository. The main parts of the project are described in the [Get started](#get-started) section.
+The following tree structure shows the files and folders within this repository. The main parts of the project are described in the [Get started](#get-started) section.
 
 ```
 │   .env.sample
@@ -380,9 +380,7 @@ The following tree structure shows the files and folders, their purpose and thei
 │           visualizations.ipynb
 │
 └───report
-    │   TODO.txt
-    │
-    └───plots
+    └───figures
             articles_by_category_combined.png
             business_economy_frequency_interest_combined.png
             entertainment_culture_frequency_interest_combined.png
